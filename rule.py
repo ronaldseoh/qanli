@@ -3,6 +3,9 @@
 import string
 from copy import deepcopy
 
+import pattern.en
+
+
 alpha = string.ascii_uppercase
 alpha_lower = string.ascii_lowercase
 
