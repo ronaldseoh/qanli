@@ -2,6 +2,8 @@
 # -*- coding: UTF-8 -*-
 import string
 from copy import deepcopy
+import os
+import inspect
 
 import pattern.en
 
@@ -28,7 +30,9 @@ FALSE_KW = {'false', 'incorrect'}
 # ref: https://gist.github.com/nlothian/9240750
 VERB_XPOS = {'VBZ', 'VB', 'VBD', 'VBN', 'VBP'}
 
-with open('preps.txt', 'r') as f:
+this_script_location = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+
+with open(os.path.join(this_script_location, 'preps.txt'), 'r') as f:
     common_preps = f.read().splitlines()
 
 
